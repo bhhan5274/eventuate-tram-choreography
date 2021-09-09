@@ -1,0 +1,10 @@
+rootProject.name = 'eventuate-choreography'
+include 'common'
+include 'common-swagger'
+include 'order-service-api-messaging'
+include 'order-service-api-web'
+include 'order-service'
+include 'customer-service-api-messaging'
+include 'customer-service-api-web'
+include 'customer-service'
+
