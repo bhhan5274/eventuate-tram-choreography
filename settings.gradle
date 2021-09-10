@@ -7,4 +7,5 @@ include 'order-service'
 include 'customer-service-api-messaging'
 include 'customer-service-api-web'
 include 'customer-service'
+include 'end-to-end-tests'
 

@@ -57,7 +57,7 @@ dockerCompose {
     mysqlbinloginfrastructure {
         projectName = null
         useComposeFiles = ["docker-compose-mysql-binlog.yml"]
-        startedServices = ["cdc-service", "zipkin"]
+        startedServices = ["cdc-service", "zipkin", "mysql-server", "kafka", "zookeeper"]
         removeContainers = project.ext.removeContainers
     }
 }
@@ -76,4 +76,8 @@ task buildAndStartServicesMySql(type: GradleBuild) {
 
 task stopServicesMySql(type: GradleBuild) {
     tasks = ["mysqlbinlogComposeDown"]
+}
+
+task EndToEndTest(type: Exec) {
+     commandLine 'sh', '-c', './end-to-end-test.sh'
 }
